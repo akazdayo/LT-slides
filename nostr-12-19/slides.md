@@ -86,6 +86,9 @@ layout: fact
 layout: center
 ---
 <img src="https://storage.googleapis.com/zenn-user-upload/ab2f980a2124-20231210.png"/>
+<p style="font-size: 0.8em; text-align: right;">
+  引用元：<a href="https://zenn.dev/mattn/articles/cf43423178d65c" target="_blank" rel="noopener" class="text-blue-500">https://zenn.dev/mattn/articles/cf43423178d65c</a>
+</p>
 ---
 layout: two-cols
 ---
@@ -187,6 +190,9 @@ console.log(event);
 layout: center
 ---
 <img src="https://storage.googleapis.com/zenn-user-upload/ab2f980a2124-20231210.png"/>
+<p style="font-size: 0.8em; text-align: right;">
+  引用元：<a href="https://zenn.dev/mattn/articles/cf43423178d65c" target="_blank" rel="noopener" class="text-blue-500">https://zenn.dev/mattn/articles/cf43423178d65c</a>
+</p>
 
 ---
 layout: center
