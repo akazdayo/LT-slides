@@ -48,36 +48,114 @@ transition: null
 layout: center
 ---
 
-# スライドの内容をここに追加
+# Slidev × スマホClaude Code × Vercel
+## 相性良すぎて草
 
 ---
 layout: fact
 ---
 
 <h2 class="text-center">
-  重要なポイント
+  このスライド、実は...
+  <br><br>
+  📱 スマホだけで作りました
 </h2>
+
+---
+layout: center
+---
+
+## なぜこの組み合わせが最強なのか？
+
+<div class="text-2xl mt-8">
+
+1. **Slidev** - Markdownでスライドが書ける
+2. **スマホClaude Code** - どこでもコーディング
+3. **Vercel** - 自動デプロイ
+
+</div>
 
 ---
 layout: two-cols
 ---
 
-## 左側の内容
+## 従来の開発フロー
 
-- ポイント1
-- ポイント2
-- ポイント3
+- PCを開く
+- エディタを起動
+- コードを書く
+- ビルド確認
+- 手動デプロイ
+
+<p class="text-xl mt-4">😩 面倒...</p>
 
 ::right::
 
-## 右側の内容
+## 今の開発フロー
 
-- ポイントA
-- ポイントB
-- ポイントC
+- スマホでClaude Codeを開く
+- 「スライド追加して」と言う
+- 自動でコミット&プッシュ
+- Vercelが自動デプロイ
+
+<p class="text-xl mt-4">🚀 爆速！</p>
+
+---
+layout: center
+---
+
+## 実際のワークフロー
+
+```
+スマホ 📱
+  ↓ Claude Codeで編集指示
+GitHub 🐙
+  ↓ 自動プッシュ
+Vercel ▲
+  ↓ 自動デプロイ
+本番環境 🌐
+```
+
+<p class="text-xl mt-4">全部自動。人間は指示するだけ。</p>
+
+---
+layout: fact
+---
+
+<h2 class="text-center">
+  つまり...
+  <br><br>
+  電車の中でも
+  <br>
+  布団の中でも
+  <br>
+  スライドが作れる
+</h2>
+
+---
+layout: center
+---
+
+## まとめ
+
+<div class="text-xl">
+
+- **Slidev**: Markdownベースで差分管理が楽
+- **Claude Code**: スマホから自然言語でコーディング
+- **Vercel**: GitHubと連携して自動デプロイ
+
+</div>
+
+<p class="text-2xl mt-8 font-bold">
+  この3つの組み合わせ、マジで革命的
+</p>
 
 ---
 layout: center
 ---
 
 ご清聴ありがとうございました！
+
+<p class="mt-8 text-gray-500">
+  ※このスライドもスマホClaude Codeで作成しました
+</p>
