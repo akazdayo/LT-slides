@@ -48,33 +48,117 @@ transition: null
 layout: center
 ---
 
-# スライドの内容をここに追加
+# みなさん、NixOSって知ってますか？
+
+---
+layout: center
+---
+
+## 再現可能で宣言的なLinuxディストリビューション
 
 ---
 layout: fact
 ---
 
 <h2 class="text-center">
-  重要なポイント
+  設定ファイル1つで
+  <br>
+  環境が完全に再現できる
+  <br>
+  それがNixOS
 </h2>
 
 ---
 layout: two-cols
 ---
 
-## 左側の内容
+## NixOSの特徴
 
-- ポイント1
-- ポイント2
-- ポイント3
+- **宣言的な設定**
+  - すべての設定が1つのファイルで管理
+- **再現可能**
+  - 同じ設定から同じ環境が構築される
+- **ロールバック可能**
+  - いつでも前の状態に戻せる
+- **安全なアップグレード**
+  - 壊れても前の世代に戻れる
 
 ::right::
 
-## 右側の内容
+## 従来のLinuxとの違い
 
-- ポイントA
-- ポイントB
-- ポイントC
+- **従来**: 手作業での設定変更
+  - 再現が困難
+  - 環境が徐々に汚れる
+- **NixOS**: 設定ファイルで宣言
+  - 完全に再現可能
+  - クリーンな環境を維持
+
+---
+
+## 設定例: configuration.nix
+
+```nix
+{ config, pkgs, ... }:
+
+{
+  # システム設定
+  networking.hostName = "my-nixos";
+
+  # パッケージのインストール
+  environment.systemPackages = with pkgs; [
+    vim
+    git
+    firefox
+  ];
+
+  # サービスの有効化
+  services.openssh.enable = true;
+
+  # ユーザー設定
+  users.users.akazdayo = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" ];
+  };
+}
+```
+
+---
+layout: two-cols
+---
+
+## NixOSの良いところ
+
+- 環境の完全な再現性
+- 複数バージョンの共存が可能
+- 安全な実験ができる
+  - 失敗しても簡単にロールバック
+- dotfilesとの相性が良い
+  - Gitでバージョン管理できる
+
+::right::
+
+## NixOSの大変なところ
+
+- 学習曲線が急
+  - Nix言語を学ぶ必要がある
+- 情報が少ない
+  - 日本語の情報は特に少ない
+- 既存の知識が使えないことも
+  - FHS準拠ではない
+- ビルド時間が長いことがある
+
+---
+layout: center
+---
+
+## それでもNixOSを使う理由
+
+**一度設定すれば、どこでも同じ環境が手に入る**
+
+新しいマシンでも、クラウドでも、コンテナでも
+<br>
+設定ファイルを適用するだけで同じ環境が完成
 
 ---
 layout: center
