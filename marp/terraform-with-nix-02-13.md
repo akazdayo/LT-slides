@@ -45,6 +45,87 @@ theme: gaia
 
 ---
 
+## コマンドの比較：SSH/Git vs Nix
+
+---
+
+<div class="columns">
+<div>
+
+### 通常のSSH/Git管理
+
+```bash
+# サーバーにSSH接続
+ssh user@server
+
+# パッケージインストール
+sudo apt-get update
+sudo apt-get install nginx
+
+# 設定ファイル編集
+sudo vim /etc/nginx/nginx.conf
+
+# サービス再起動
+sudo systemctl restart nginx
+
+# 手動でGit管理
+git add .
+git commit -m "Update nginx config"
+```
+
+</div>
+<div>
+
+### Nix管理
+
+```nix
+# configuration.nix
+{
+  services.nginx = {
+    enable = true;
+    # 設定はコードとして記述
+  };
+}
+```
+
+```bash
+# ビルド＆デプロイ
+nixos-rebuild switch
+
+# 自動的にGitで管理可能
+# 設定ミスはビルド時に検出
+```
+
+</div>
+</div>
+
+---
+
+## なぜNixが優れているか
+
+<div class="columns">
+<div>
+
+### 従来の方法の問題
+- 手動操作でミスが起きやすい
+- 環境依存の問題
+- 再現が困難
+- ロールバックが面倒
+
+</div>
+<div>
+
+### Nixの利点
+- **宣言的**：コードで管理
+- **再現可能**：どこでも同じ環境
+- **安全**：ビルドエラーで事前検出
+- **簡単なロールバック**
+
+</div>
+</div>
+
+---
+
 ![bg opacity](https://picsum.photos/800/600?image=53)
 ## 7. Columns
 
