@@ -49,9 +49,16 @@ transition: null
 
 ---
 
+## layout: two-cols
+
 # Nixとかいうやつ
 
 - Nix!=NixOS
+-
+
+::right::
+
+<img src="https://brand.nixos.org/logos/nixos-logo-default-gradient-black-regular-vertical-recommended.svg"/>
 
 ---
 
@@ -80,6 +87,7 @@ transition: null
 # マイクラサーバー管理者ってめんどくさい...
 
 例えば...
+
 - MODいれてー
 - サーバー落ちたんだけど
 - 俺のことホワイトリスト, OP追加して
@@ -92,4 +100,3 @@ transition: null
 ができます
 
 ---
-
